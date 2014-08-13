@@ -114,7 +114,6 @@ case $os in
       --description "$DESCRIPTION" \
       --vendor "Elasticsearch" \
       --license "Apache 2.0" \
-      -d "java7-runtime-headless | java6-runtime-headless | j2re1.7" \
       --deb-user root --deb-group root \
       --before-install $os/before-install.sh \
       --before-remove $os/before-remove.sh \
