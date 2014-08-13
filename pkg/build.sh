@@ -61,7 +61,7 @@ case $os@$release in
   ubuntu@*|debian@*)
     mkdir -p $destdir/etc/logstash/conf.d
     mkdir -p $destdir/etc/logrotate.d
-    mkdir -p $destdir/etc/init
+    #mkdir -p $destdir/etc/init
     mkdir -p $destdir/etc/init.d
     mkdir -p $destdir/var/lib/logstash
     mkdir -p $destdir/var/log/logstash
@@ -69,11 +69,11 @@ case $os@$release in
     touch $destdir/etc/default/logstash
     install -m644 logrotate.conf $destdir/etc/logrotate.d/logstash
     install -m644 logstash.default $destdir/etc/default/logstash
-    install -m755 logstash.upstart.ubuntu $destdir/etc/init/logstash.conf
-    install -m755 logstash.sysv $destdir/etc/init.d/logstash
-    install -m644 logstash-web.default $destdir/etc/default/logstash-web
-    install -m755 logstash-web.upstart.ubuntu $destdir/etc/init/logstash-web.conf
-    install -m755 logstash-web.sysv $destdir/etc/init.d/logstash-web
+    #install -m755 logstash.upstart.ubuntu $destdir/etc/init/logstash.conf
+    install -m755 logstash.sysv.ubuntu $destdir/etc/init.d/logstash
+    #install -m644 logstash-web.default $destdir/etc/default/logstash-web
+    #install -m755 logstash-web.upstart.ubuntu $destdir/etc/init/logstash-web.conf
+    #install -m755 logstash-web.sysv $destdir/etc/init.d/logstash-web
     ;;
   *) 
     echo "Unknown OS: $os $release"
