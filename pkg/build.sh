@@ -119,7 +119,6 @@ case $os in
       --before-remove $os/before-remove.sh \
       --after-install $os/after-install.sh \
       --config-files /etc/default/logstash \
-      --config-files /etc/default/logstash-web \
       --config-files /etc/logrotate.d/logstash \
       -f -C $destdir .
     ;;
